@@ -1,6 +1,6 @@
-import { serveDir } from "jsr:@std/http/file-server";
+import { serveDir } from "jsr:@std/http@^1.1.3/file-server";
 
-Deno.serve(async (req) => {
+Deno.serve((req) => {
   const pathname = new URL(req.url).pathname;
   console.log(pathname);
 
